@@ -1,12 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobileAppKtuYbs.Views.pBilgilerim">
+             x:Class="MobileAppKtuYbs.Views.pBilgilerim"
+             Title="Bilgilerim"
+             BackgroundColor="Green">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="adsoyad" Text="Ad Soyad:" FontSize="Medium">
-            </Label>
+        <StackLayout Padding="0,5,0,0" BackgroundColor="#1e6f97">
             
+            
+            <Frame Padding="0" HeightRequest="100" WidthRequest="100" BackgroundColor="White"
+                   CornerRadius="100" BorderColor="Teal" HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                <Frame.Content>
+                    <Image x:Name="imagex" Aspect="AspectFill"></Image>
+                </Frame.Content>
+            </Frame>
+            
+            <Frame HasShadow="False" CornerRadius="40" HeightRequest="100" Margin="0" VerticalOptions="FillAndExpand" BackgroundColor="AntiqueWhite">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ad Soyad:" Grid.Row="0" Grid.Column="0" FontSize="Medium" FontAttributes="Bold"  TextColor="#4a9bc3"></Label>
+                <Label x:Name="nameSurname" Text="" Grid.Row="0" Grid.Column="1" FontSize="Medium" FontAttributes="Bold"  TextColor="#115c81"/>
+                
+                <BoxView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" Color="#9999" ></BoxView>
+                
+                <Label Text="Öğrenci No:" Grid.Row="1" Grid.Column="0" FontSize="Medium" FontAttributes="Bold"  TextColor="#4a9bc3"></Label>
+                <Label x:Name="studentNumber" Text="" Grid.Row="1" Grid.Column="1" FontSize="Medium" FontAttributes="Bold"  TextColor="#115c81"></Label>
+
+                <Label Text="Fakülte:" Grid.Row="2" Grid.Column="0" FontSize="Medium" FontAttributes="Bold"  TextColor="#4a9bc3"></Label>
+                <Label x:Name="faculty" Text="" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" FontSize="Medium" FontAttributes="Bold"  TextColor="#115c81"></Label>
+            </Grid>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -12,11 +12,10 @@ namespace MobileAppKtuYbs.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class pLogin : ContentPage
     {
-
         public pLogin()
         {
             InitializeComponent();
-
+            
         }
         
         //await çağırmak için async olması gerekiyor.
