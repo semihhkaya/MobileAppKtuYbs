@@ -16,6 +16,8 @@ namespace MobileAppKtuYbs.Views
             //kullaniciDTO kullaniciDTO = App._kullanici;
             InitializeComponent();
 
+            //Ogrenci no ekle app._ogrenci no (xaml tarafına grid olarak ekle)
+
             nameSurname.Text = App._kullanici.AdSoyad;
             studentNumber.Text = Convert.ToString(App._kullanici.OgrId);
             faculty.Text = App._kullanici.FakulteAdi;

@@ -34,4 +34,34 @@ namespace MobileAppKtuYbs
         public string CepTel { get; set; }
         public string HesKodu { get; set; }
     }
+    public class ogrenciAkademikYapiDTO
+    {
+        public bool Hata { get; set; }
+        public string HataMesaji { get; set; }
+        public string AdSoyad { get; set; }
+        public string BolumAdi { get; set; }
+        public string Danisman { get; set; }
+        public string FakulteAdi { get; set; }
+        public string Program { get; set; }
+        public string ResimUrl { get; set; }
+        public int Sinif { get; set; }
+        public List<sinifDonemDTO> sinifDonem { get; set; }
+    }
+    public class sinifDonemDTO
+    {
+        public List<DersDurumDTO> Dersler  { get; set; }
+        public string SinifDonem { get; set; }
+    }
+    public class DersDurumDTO
+    {
+        public bool Hata { get; set; }
+        public string HataMesaji { get; set; }
+        public string BasariDurumu { get; set; }
+        public string BasariNotu { get; set; }
+        public string DersAdi { get; set; }
+        public Int64? Donem { get; set; }
+        public string DurumKodu { get; set; }
+        public Int16? Sinif { get; set; }
+        public string YazilimSekli { get; set; }
+    }
 }

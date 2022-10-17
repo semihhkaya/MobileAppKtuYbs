@@ -16,6 +16,9 @@ namespace MobileAppKtuYbs.Droid
             var configuration = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<wsKTU.returnKimlikDogrulama, kullaniciDTO>();
+                cfg.CreateMap<wsKTU.returnOgrenciAkademikYapi, ogrenciAkademikYapiDTO>();
+                cfg.CreateMap<wsKTU.SinifDonem, sinifDonemDTO>();
+                cfg.CreateMap<wsKTU.DersDurum, DersDurumDTO>();
 
             });
             mapper = configuration.CreateMapper();

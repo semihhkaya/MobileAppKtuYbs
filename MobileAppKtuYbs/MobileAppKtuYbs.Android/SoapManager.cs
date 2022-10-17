@@ -41,6 +41,27 @@ namespace MobileAppKtuYbs.Droid
                 var dto = MainActivity.mapper.Map<kullaniciDTO>(sonuc);
                 return dto;
             }
+
+        }
+        public async Task<MobileAppKtuYbs.ogrenciAkademikYapiDTO> OgrenciAkademikYapi(string ogrenciNo, string sifre)
+        {
+
+            wsKTU.returnOgrenciAkademikYapi sonuc = sClient.OgrenciAkademikYapi(auth, ogrenciNo, sifre);
+            if (sonuc.Hata)
+            {
+                // hata oluştu
+                return new ogrenciAkademikYapiDTO()
+                {
+                    Hata = true,
+                    HataMesaji = sonuc.HataMesaji
+                };
+            }
+            else
+            {
+                var dto = MainActivity.mapper.Map<ogrenciAkademikYapiDTO>(sonuc);
+                return dto;
+            }
+
         }
     }
 }

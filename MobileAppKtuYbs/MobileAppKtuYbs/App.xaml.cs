@@ -8,6 +8,7 @@ namespace MobileAppKtuYbs
     {
         public static SoapManager sManager { get; set; }
         public static kullaniciDTO _kullanici = new kullaniciDTO();
+        public static string _ogrenciNo, _sifre;
         public App()
         {
 

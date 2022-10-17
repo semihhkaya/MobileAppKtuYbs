@@ -14,7 +14,6 @@ namespace MobileAppKtuYbs.Views
     {
         public pLogin()
         {
-            string no = txtOgrenciNo.Text;
             InitializeComponent();
             
         }
@@ -36,6 +35,8 @@ namespace MobileAppKtuYbs.Views
                 DisplayAlert("Hata", s.HataMesaji, "Tamam");
             else
             {
+                App._ogrenciNo = ogrencino;
+                App._sifre = sifre;
                 App._kullanici = s;
                 App.Current.MainPage = new pMain();
             }

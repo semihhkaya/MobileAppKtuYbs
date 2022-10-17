@@ -19,5 +19,10 @@ namespace MobileAppKtuYbs
             return service.KimlikDogrula(ogrenciNo, sifre);
         }
 
+        public Task<ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre)
+        {
+            return service.OgrenciAkademikYapi(ogrenciNo, sifre);
+        }
+
     }
 }
