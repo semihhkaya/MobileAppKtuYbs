@@ -14,10 +14,10 @@ namespace MobileAppKtuYbs.Views
     {
         public pLogin()
         {
+            string no = txtOgrenciNo.Text;
             InitializeComponent();
             
         }
-        
         //await çağırmak için async olması gerekiyor.
 
         private async void Button_Clicked(object sender, EventArgs e)
