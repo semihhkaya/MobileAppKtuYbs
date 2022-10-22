@@ -23,7 +23,7 @@ namespace MobileAppKtuYbs
 
             BindingContext = new pMainFlyoutViewModel();
             ListView = MenuItemsListView;
-            
+
         }
 
         class pMainFlyoutViewModel : INotifyPropertyChanged

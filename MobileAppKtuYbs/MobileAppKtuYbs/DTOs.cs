@@ -38,30 +38,31 @@ namespace MobileAppKtuYbs
     {
         public bool Hata { get; set; }
         public string HataMesaji { get; set; }
-        public string AdSoyad { get; set; }
-        public string BolumAdi { get; set; }
-        public string Danisman { get; set; }
-        public string FakulteAdi { get; set; }
-        public string Program { get; set; }
-        public string ResimUrl { get; set; }
-        public int Sinif { get; set; }
+        public string ADSOYAD { get; set; }
+        public string BOLUMADI { get; set; }
+        public string DANISMAN { get; set; }
+        public string FAKULTEADI { get; set; }
+        public string PROGRAM { get; set; }
+        public string RESIMURL { get; set; }
         public List<sinifDonemDTO> sinifDonem { get; set; }
+        public Int32 SINIFI { get; set; }
+
     }
     public class sinifDonemDTO
     {
         public List<DersDurumDTO> Dersler  { get; set; }
-        public string SinifDonem { get; set; }
+        public string SINIFDONEM { get; set; }
     }
     public class DersDurumDTO
     {
         public bool Hata { get; set; }
         public string HataMesaji { get; set; }
-        public string BasariDurumu { get; set; }
-        public string BasariNotu { get; set; }
-        public string DersAdi { get; set; }
-        public Int64? Donem { get; set; }
-        public string DurumKodu { get; set; }
-        public Int16? Sinif { get; set; }
-        public string YazilimSekli { get; set; }
+        public string BASARI_DURUMU { get; set; }
+        public string BASARI_NOTU { get; set; }
+        public string DERS_ADI { get; set; }
+        public Int64? DONEM { get; set; }
+        public string DURUM_KODU { get; set; }
+        public Int16? SINIF { get; set; }
+        public string YAZILIM_SEKLİ { get; set; }
     }
 }

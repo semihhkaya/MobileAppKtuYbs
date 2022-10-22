@@ -27,6 +27,7 @@ namespace MobileAppKtuYbs.Droid
         {
 
             wsKTU.returnKimlikDogrulama sonuc = sClient.KimlikDogrula(auth, ogrenciNo, sifre);
+            
             if (sonuc.Hata)
             {
                 // hata oluştu
@@ -43,7 +44,7 @@ namespace MobileAppKtuYbs.Droid
             }
 
         }
-        public async Task<MobileAppKtuYbs.ogrenciAkademikYapiDTO> OgrenciAkademikYapi(string ogrenciNo, string sifre)
+        public async Task<MobileAppKtuYbs.ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre)
         {
 
             wsKTU.returnOgrenciAkademikYapi sonuc = sClient.OgrenciAkademikYapi(auth, ogrenciNo, sifre);

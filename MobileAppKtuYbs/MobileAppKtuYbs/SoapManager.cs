@@ -9,6 +9,7 @@ namespace MobileAppKtuYbs
     {
         ISoapService service;
 
+        //ctor
         public SoapManager(ISoapService s)
         {
             service = s;
@@ -19,9 +20,9 @@ namespace MobileAppKtuYbs
             return service.KimlikDogrula(ogrenciNo, sifre);
         }
 
-        public Task<ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre)
+        public async Task<MobileAppKtuYbs.ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre)
         {
-            return service.OgrenciAkademikYapi(ogrenciNo, sifre);
+            return await service.AkademikYapi(ogrenciNo, sifre);
         }
 
     }

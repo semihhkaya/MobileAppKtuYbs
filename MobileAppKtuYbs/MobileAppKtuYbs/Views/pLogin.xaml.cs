@@ -38,6 +38,7 @@ namespace MobileAppKtuYbs.Views
                 App._ogrenciNo = ogrencino;
                 App._sifre = sifre;
                 App._kullanici = s;
+
                 App.Current.MainPage = new pMain();
             }
 
