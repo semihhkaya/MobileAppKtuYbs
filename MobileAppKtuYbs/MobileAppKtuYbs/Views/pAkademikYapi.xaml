@@ -2,25 +2,41 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppKtuYbs.Views.pAkademikYapi">
-    <ContentPage.Content>
 
-        <ListView x:Name="listView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label Text="{Binding DERS_ADI}" TextColor="Blue">
+    <ListView x:Name="listView" HasUnevenRows="True" VerticalOptions="Start">
+        <ListView.ItemTemplate>
+            <DataTemplate>
 
-                            </Label>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-                
-                
-            </ListView.ItemTemplate>
-        
-        </ListView>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding SINIFDONEM}" TextColor="Blue">
 
+                        </Label>
+                        <ListView ItemsSource="{Binding Path=Dersler}"
+                                  RowHeight="40">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal"  
+                                                     HeightRequest="40">
+                                        <Label Text="{Binding DERS_ADI}" VerticalOptions="Center">
+                                        </Label>
+                                        <Label Text="{Binding YAZILIM_SEKLİ}" VerticalOptions="Center">
+                                        </Label>
+                                        <Label Text="{Binding BASARI_DURUMU}" VerticalOptions="Center">
+                                        </Label>
+                                        <Label Text="{Binding BASARI_NOTU}" VerticalOptions="Center">
+                                        </Label>
+                                        </StackLayout>
+                                    </ViewCell>
 
-    </ContentPage.Content>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
 </ContentPage>

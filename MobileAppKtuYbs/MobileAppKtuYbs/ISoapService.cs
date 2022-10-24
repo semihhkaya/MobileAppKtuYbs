@@ -9,5 +9,6 @@ namespace MobileAppKtuYbs
     {
         Task<kullaniciDTO> KimlikDogrula(string ogrenciNo, string sifre);
         Task<ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre);
+        Task<OgrDersProgramiDTO> OgrenciDersProgrami(Int64 ogrenciId, string sifre);
     }
 }

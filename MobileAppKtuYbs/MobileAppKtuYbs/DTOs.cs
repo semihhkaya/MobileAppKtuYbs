@@ -65,4 +65,23 @@ namespace MobileAppKtuYbs
         public Int16? SINIF { get; set; }
         public string YAZILIM_SEKLİ { get; set; }
     }
+
+    public class OgrDersProgramiDTO //Hocadaki derstakvimdto
+    {
+        public List<DersTakvimDTO> Dersler { get; set; }
+        public bool Hata { get; set; }
+        public string HataMesaji { get; set; }
+    }
+    public class DersTakvimDTO
+    {
+        public Int16 GUN_ID { get; set; }
+        public List<DersTakvimGunDTO> Saatler { get; set; }
+    }
+    public class DersTakvimGunDTO
+    {
+        public string AKADEMISYEN { get; set; }
+        public string DERSLIK { get; set; }
+        public string DERS_KODU_ADI { get; set; }
+        public Int16 SAAT_ARALIGI_ID { get; set; }
+    }
 }

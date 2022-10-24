@@ -25,5 +25,9 @@ namespace MobileAppKtuYbs
             return await service.AkademikYapi(ogrenciNo, sifre);
         }
 
+        public Task<OgrDersProgramiDTO> OgrenciDersProgrami(Int64 ogrenciId, string sifre)
+        {
+            return service.OgrenciDersProgrami(ogrenciId, sifre);
+        }
     }
 }

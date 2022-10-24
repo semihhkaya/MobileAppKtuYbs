@@ -19,6 +19,10 @@ namespace MobileAppKtuYbs.Droid
                 cfg.CreateMap<wsKTU.returnOgrenciAkademikYapi, ogrenciAkademikYapiDTO>();
                 cfg.CreateMap<wsKTU.SinifDonem, sinifDonemDTO>();
                 cfg.CreateMap<wsKTU.DersDurum, DersDurumDTO>();
+                cfg.CreateMap<wsKTU.returnDersTakvim, OgrDersProgramiDTO>();
+                cfg.CreateMap<wsKTU.DersTakvim, DersTakvimDTO>();
+                cfg.CreateMap<wsKTU.DersTakvimGun, DersTakvimGunDTO>();
+
 
             });
             mapper = configuration.CreateMapper();

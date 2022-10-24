@@ -10,21 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace MobileAppKtuYbs.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class pAkademikYapi : ContentPage
+    public partial class pDersProgrami : ContentPage
     {
-        public pAkademikYapi()
+        public pDersProgrami()
         {
             InitializeComponent();
-            AY();
+            DP();
         }
-        public async void AY()
+        public async void DP()
         {
-
-            //tekrar bak.
-
-            ogrenciAkademikYapiDTO sonuc = await App.sManager.AkademikYapi(App._ogrenciNo, App._sifre);
-
-            listView.ItemsSource = sonuc.sinifDonem;
+            OgrDersProgramiDTO sonuc = await App.sManager.OgrenciDersProgrami(App._kullanici.OgrId, App._sifre);
 
         }
     }

@@ -44,6 +44,7 @@ namespace MobileAppKtuYbs.Droid
             }
 
         }
+
         public async Task<MobileAppKtuYbs.ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre)
         {
 
@@ -60,6 +61,27 @@ namespace MobileAppKtuYbs.Droid
             else
             {
                 var dto = MainActivity.mapper.Map<ogrenciAkademikYapiDTO>(sonuc);
+                return dto;
+            }
+
+        }
+        public async Task<MobileAppKtuYbs.OgrDersProgramiDTO> OgrenciDersProgrami(Int64 ogrenciId, string sifre)
+        {
+
+            wsKTU.returnDersTakvim sonuc = sClient.OgrenciDersProgrami(auth, ogrenciId, sifre);
+            //sonuc.Dersler[0].Saatler[0].
+            if (sonuc.Hata)
+            {
+                // hata oluştu
+                return new OgrDersProgramiDTO()
+                {
+                    Hata = true,
+                    HataMesaji = sonuc.HataMesaji
+                };
+            }
+            else
+            {
+                var dto = MainActivity.mapper.Map<OgrDersProgramiDTO>(sonuc);
                 return dto;
             }
 

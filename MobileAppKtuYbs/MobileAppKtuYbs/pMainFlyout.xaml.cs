@@ -36,7 +36,7 @@ namespace MobileAppKtuYbs
                 {
                     new pMainFlyoutMenuItem { Id = 0, Title = "Bilgilerim", TargetType=typeof(Views.pBilgilerim) },
                     new pMainFlyoutMenuItem { Id = 1, Title = "Akademik Yapı", TargetType=typeof(Views.pAkademikYapi) },
-                    new pMainFlyoutMenuItem { Id = 2, Title = "Vize Notları" },
+                    new pMainFlyoutMenuItem { Id = 2, Title = "Ders Programı", TargetType=typeof(Views.pDersProgrami) },
                     new pMainFlyoutMenuItem { Id = 3, Title = "Transkript" },
                     new pMainFlyoutMenuItem { Id = 4, Title = "Akademik Durum Analizi" },
                 });
