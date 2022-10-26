@@ -9,25 +9,36 @@
 
                 <ViewCell>
                     <StackLayout>
-                        <Label Text="{Binding SINIFDONEM}" TextColor="Blue">
+
+                        <Label Text="{Binding SINIFDONEM}" HeightRequest="40" 
+                               VerticalTextAlignment="Center" BackgroundColor="#79b1cd" TextColor="#113547" FontAttributes="Bold">
 
                         </Label>
                         <ListView ItemsSource="{Binding Path=Dersler}"
-                                  RowHeight="40">
+                                  RowHeight="40"
+                                  BackgroundColor="#72e573">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <StackLayout Orientation="Horizontal"  
-                                                     HeightRequest="40">
-                                        <Label Text="{Binding DERS_ADI}" VerticalOptions="Center">
+                                        <!--<StackLayout Orientation="Horizontal"  
+                                                     HeightRequest="40">-->
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="180"></ColumnDefinition>
+                                                <ColumnDefinition Width="60"></ColumnDefinition>
+                                                <ColumnDefinition Width="80"></ColumnDefinition>
+                                                
+                                            </Grid.ColumnDefinitions>
+
+                                        <Label Padding="5,0,0,0" Text="{Binding DERS_ADI}" Grid.Column="0" VerticalOptions="Center">
                                         </Label>
-                                        <Label Text="{Binding YAZILIM_SEKLİ}" VerticalOptions="Center">
+                                        <Label Text="{Binding BASARI_DURUMU}" Grid.Column="2" VerticalOptions="Center">
                                         </Label>
-                                        <Label Text="{Binding BASARI_DURUMU}" VerticalOptions="Center">
+                                        <Label Text="{Binding BASARI_NOTU}" Grid.Column="3" VerticalOptions="Center">
                                         </Label>
-                                        <Label Text="{Binding BASARI_NOTU}" VerticalOptions="Center">
-                                        </Label>
-                                        </StackLayout>
+                                        </Grid>
+                                        
+                                        <!--</StackLayout>-->
                                     </ViewCell>
 
                                 </DataTemplate>

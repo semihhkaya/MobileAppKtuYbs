@@ -16,6 +16,7 @@ namespace MobileAppKtuYbs.Views
         {
             InitializeComponent();
             AY();
+
         }
         public async void AY()
         {
@@ -25,6 +26,7 @@ namespace MobileAppKtuYbs.Views
             ogrenciAkademikYapiDTO sonuc = await App.sManager.AkademikYapi(App._ogrenciNo, App._sifre);
 
             listView.ItemsSource = sonuc.sinifDonem;
+
 
         }
     }
