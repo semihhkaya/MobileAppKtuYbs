@@ -2,11 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppKtuYbs.Views.pDersProgrami">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="DersProgramı"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <ListView x:Name="dersProgrami" HasUnevenRows="True" VerticalOptions="Start">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label  Text="{Binding GUN_ID}" HeightRequest="40"></Label>
+                        <ListView ItemsSource="{Binding Path=Saatler}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Label HeightRequest="40" Text="{Binding DERS_KODU_ADI}"></Label>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                            
+                        </ListView>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
 </ContentPage>
