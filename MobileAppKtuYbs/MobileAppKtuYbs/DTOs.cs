@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace MobileAppKtuYbs
 {
+
+    //Ders programında Boş olan günü de kaldır.
     public class kullaniciDTO
     {
         //http://193.140.168.236/WSAndroid/Service1.asmx
@@ -72,10 +75,21 @@ namespace MobileAppKtuYbs
         public bool Hata { get; set; }
         public string HataMesaji { get; set; }
     }
-    public class DersTakvimDTO
+    public class DersTakvimDTO //Hocadaki DerslerDto
     {
         public Int16 GUN_ID { get; set; }
         public List<DersTakvimGunDTO> Saatler { get; set; }
+        public List<DersTakvimGunDTO> DoluSaatler { get
+            {
+                return Saatler.Where(p => p.DERS_KODU_ADI != null).ToList();
+            } }
+        public string GUN_ADI
+        {
+            get
+            {
+                return classMethods.GunAdi(GUN_ID);
+            }
+        }
     }
     public class DersTakvimGunDTO
     {
@@ -83,5 +97,12 @@ namespace MobileAppKtuYbs
         public string DERSLIK { get; set; }
         public string DERS_KODU_ADI { get; set; }
         public Int16 SAAT_ARALIGI_ID { get; set; }
+        public string DERS_SAAT
+        {
+            get
+            {
+                return classMethods.DersSaat(SAAT_ARALIGI_ID);
+            }
+        }
     }
 }

@@ -8,16 +8,44 @@
             <DataTemplate>
                 <ViewCell>
                     <StackLayout>
-                        <Label  Text="{Binding GUN_ID}" HeightRequest="40"></Label>
-                        <ListView ItemsSource="{Binding Path=Saatler}">
+                        <Label  Text="{Binding GUN_ADI}" HeightRequest="40" BackgroundColor="Aqua"></Label>
+
+                        <ListView ItemsSource="{Binding Path=DoluSaatler}" RowHeight="75">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <Label HeightRequest="40" Text="{Binding DERS_KODU_ADI}"></Label>
+                                        <StackLayout Orientation="Horizontal" HeightRequest="75" BackgroundColor="AliceBlue">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="25"></RowDefinition>
+                                                    <RowDefinition Height="55"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+
+
+                                                <Label HeightRequest="40" Text="{Binding DERS_KODU_ADI}" 
+                                                   VerticalOptions="Center"
+                                                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"></Label>
+                                                <Label HeightRequest="40" Text="{Binding DERS_SAAT}" 
+                                                   VerticalOptions="Center"
+                                                   Grid.Row="1" Grid.Column="0"></Label>
+                                                <Label HeightRequest="40" Text="{Binding DERSLIK}" 
+                                                   VerticalOptions="Center"
+                                                   Grid.Row="1" Grid.Column="1"></Label>
+                                                <Label HeightRequest="40" Text="{Binding AKADEMISYEN}" 
+                                                   VerticalOptions="Center"
+                                                   Grid.Row="1" Grid.Column="2"></Label>
+
+                                            </Grid>
+                                        </StackLayout>
                                     </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
-                            
+
                         </ListView>
                     </StackLayout>
                 </ViewCell>

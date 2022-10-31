@@ -16,8 +16,6 @@ namespace MobileAppKtuYbs.Views
         {
             InitializeComponent();
             DP();
-
-
         }
         public async void DP()
         {
