@@ -26,6 +26,7 @@ namespace MobileAppKtuYbs.Views
             ogrenciAkademikYapiDTO sonuc = await App.sManager.AkademikYapi(App._ogrenciNo, App._sifre);
 
             listView.ItemsSource = sonuc.sinifDonem;
+            
 
 
         }

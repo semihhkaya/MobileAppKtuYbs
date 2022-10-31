@@ -32,7 +32,7 @@
 
                                             <Label TextColor="#384038" Padding="5,0,0,0" Text="{Binding DERS_ADI}" Grid.Column="0" VerticalOptions="Center">
                                         </Label>
-                                            <Label TextColor="#384038"  FontAttributes="Bold" Text="{Binding BASARI_DURUMU}" Grid.Column="2" VerticalOptions="Center">
+                                            <Label x:Name="deneme" TextColor="#384038"  FontAttributes="Bold" Text="{Binding BASARI_DURUMU}" Grid.Column="2" VerticalOptions="Center">
                                         </Label>
                                         <Label TextColor="#384038" FontAttributes="Bold" Text="{Binding BASARI_NOTU}" Grid.Column="3" VerticalOptions="Center">
                                         </Label>
