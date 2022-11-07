@@ -97,11 +97,7 @@ namespace MobileAppKtuYbs
         {
             get
             {
-                if (DoluSaatler.Count>0)
-                {
-                    return classMethods.GunAdi(GUN_ID);
-                }
-                return null;
+                return classMethods.GunAdi(GUN_ID);
             }
         }
     }
@@ -119,4 +115,9 @@ namespace MobileAppKtuYbs
             }
         }
     }
+
+    //XML WEB SERVİCE //web service nedir //PCL SHared classLib //WSDL NEDİR? //ws'De dizi ise
+    //projeden list şeklinde ulaşılır. //Reference.cs //Interface //DTO //Image yükleme Uri
+    //ImageSource //Listview-ItemSource, Binding // await async //Get-Set //Linq
+
 }

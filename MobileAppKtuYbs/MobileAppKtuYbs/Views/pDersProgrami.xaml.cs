@@ -20,7 +20,9 @@ namespace MobileAppKtuYbs.Views
         public async void DP()
         {
             OgrDersProgramiDTO sonuc = await App.sManager.OgrenciDersProgrami(App._kullanici.OgrId, App._sifre);
-            dersProgrami.ItemsSource = sonuc.Dersler;
+            dersProgrami.ItemsSource = sonuc.Dersler.Where(p=>p.DoluSaatler.Count>0).ToList();
+
+            var dersSaatToplami = sonuc.Dersler.Sum(p => p.DoluSaatler.Count); //Labela yazdır.
         }
     }
 }
