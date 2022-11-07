@@ -20,9 +20,11 @@ namespace MobileAppKtuYbs.Droid
         {
             sClient = new wsKTU.Service1();
             auth = new wsKTU.Authentication();
+
             auth.username = "android";
             auth.password = "CanKTU.2019";
         }
+
         public async Task<MobileAppKtuYbs.kullaniciDTO> KimlikDogrula(string ogrenciNo, string sifre)
         {
 
@@ -37,6 +39,7 @@ namespace MobileAppKtuYbs.Droid
                     HataMesaji = sonuc.HataMesaji
                 };
             }
+
             else
             {
                 var dto = MainActivity.mapper.Map<kullaniciDTO>(sonuc);

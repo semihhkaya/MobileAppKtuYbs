@@ -20,7 +20,7 @@ namespace MobileAppKtuYbs.Views
         //await çağırmak için async olması gerekiyor.
 
         private async void Button_Clicked(object sender, EventArgs e)
-        {
+        {  
             string ogrencino = txtOgrenciNo.Text;
             if (ogrencino.Length > 6)
                 ogrencino = ogrencino.Substring(0, 6);

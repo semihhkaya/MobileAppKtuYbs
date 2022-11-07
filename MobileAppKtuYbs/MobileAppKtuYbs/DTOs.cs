@@ -2,16 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace MobileAppKtuYbs
 {
 
-    //Ders programında Boş olan günü de kaldır.
-    public class kullaniciDTO
+    //Ders programında Boş olan günü de kaldır. //Dolu saatler 0'sa ders yoktur.
+
+    //bütün saat dilimlerini al (ALL) ve her biri için ders adına baktırt.
+    public class kullaniciDTO // Giriş
     {
         //http://193.140.168.236/WSAndroid/Service1.asmx
         public bool Hata { get; set; }
+        //property
         public string HataMesaji { get; set; }
+
         public Int64 OgrId { get; set; }
         public string OgrenciNo { get; set; }
         public string AdSoyad { get; set; }
@@ -53,7 +59,7 @@ namespace MobileAppKtuYbs
     }
     public class sinifDonemDTO
     {
-        public List<DersDurumDTO> Dersler  { get; set; }
+        public List<DersDurumDTO> Dersler { get; set; }
         public string SINIFDONEM { get; set; }
     }
     public class DersDurumDTO
@@ -74,20 +80,28 @@ namespace MobileAppKtuYbs
         public List<DersTakvimDTO> Dersler { get; set; }
         public bool Hata { get; set; }
         public string HataMesaji { get; set; }
+
     }
     public class DersTakvimDTO //Hocadaki DerslerDto
     {
         public Int16 GUN_ID { get; set; }
         public List<DersTakvimGunDTO> Saatler { get; set; }
-        public List<DersTakvimGunDTO> DoluSaatler { get
+        public List<DersTakvimGunDTO> DoluSaatler
+        {
+            get
             {
                 return Saatler.Where(p => p.DERS_KODU_ADI != null).ToList();
-            } }
+            }
+        }
         public string GUN_ADI
         {
             get
             {
-                return classMethods.GunAdi(GUN_ID);
+                if (DoluSaatler.Count>0)
+                {
+                    return classMethods.GunAdi(GUN_ID);
+                }
+                return null;
             }
         }
     }

@@ -14,6 +14,7 @@ namespace MobileAppKtuYbs
         public static ogrenciAkademikYapiDTO _akademikYapiKullanici = new ogrenciAkademikYapiDTO();
         public static List<sinifDonemDTO> _sinifDonemKullanici = new List<sinifDonemDTO>();
         public static List<DersDurumDTO> _dersDurumKullanici = new List<DersDurumDTO>();
+        
         public App()
         {
 

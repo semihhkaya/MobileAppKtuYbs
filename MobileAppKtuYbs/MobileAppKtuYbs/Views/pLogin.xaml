@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppKtuYbs.Views.pLogin">
     <ContentPage.Content>
+        
         <StackLayout BackgroundColor="#e6e6e6">
             <Grid>
                 <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
@@ -10,6 +11,7 @@
                         <Image Source="https://i.hizliresim.com/8s841s1.jpg" Aspect="AspectFill" Margin="0"/>
                     </Frame>
                 </StackLayout>
+                
                 <StackLayout Padding="0" Margin="10,125,10,0" HorizontalOptions="FillAndExpand">
                     <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
                         <!--Çerçeve başlangıç-->
@@ -56,7 +58,8 @@
 
                                 </StackLayout>
 
-                                <Button Text="Giriş Yap" BackgroundColor="#115c81" TextColor="White" CornerRadius="30" Clicked="Button_Clicked" />
+                                <Button Text="Giriş Yap" BackgroundColor="#115c81" TextColor="White" CornerRadius="30" 
+                                        Clicked="Button_Clicked" />
 
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                                     <Label Text="Sorun mu yaşıyorsunuz?" TextColor="DarkGray" FontSize="Small"/>

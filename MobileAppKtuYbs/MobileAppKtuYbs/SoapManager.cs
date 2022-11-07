@@ -9,7 +9,7 @@ namespace MobileAppKtuYbs
     {
         ISoapService service;
 
-        //ctor
+        //ctor //Consructor
         public SoapManager(ISoapService s)
         {
             service = s;
@@ -18,6 +18,7 @@ namespace MobileAppKtuYbs
         public Task<kullaniciDTO> KimlikDogrula(string ogrenciNo, string sifre)
         {
             return service.KimlikDogrula(ogrenciNo, sifre);
+
         }
 
         public async Task<MobileAppKtuYbs.ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre)
