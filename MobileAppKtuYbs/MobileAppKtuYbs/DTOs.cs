@@ -43,6 +43,7 @@ namespace MobileAppKtuYbs
         public string CepTel { get; set; }
         public string HesKodu { get; set; }
     }
+
     public class ogrenciAkademikYapiDTO
     {
         public bool Hata { get; set; }
