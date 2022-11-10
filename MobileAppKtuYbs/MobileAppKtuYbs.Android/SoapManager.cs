@@ -27,7 +27,6 @@ namespace MobileAppKtuYbs.Droid
 
         public async Task<MobileAppKtuYbs.kullaniciDTO> KimlikDogrula(string ogrenciNo, string sifre)
         {
-
             wsKTU.returnKimlikDogrulama sonuc = sClient.KimlikDogrula(auth, ogrenciNo, sifre);
             
             if (sonuc.Hata)
@@ -37,6 +36,7 @@ namespace MobileAppKtuYbs.Droid
                 {
                     Hata = true,
                     HataMesaji = sonuc.HataMesaji
+
                 };
             }
 
