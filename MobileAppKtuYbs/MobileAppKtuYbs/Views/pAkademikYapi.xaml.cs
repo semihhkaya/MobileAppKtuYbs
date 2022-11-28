@@ -16,12 +16,9 @@ namespace MobileAppKtuYbs.Views
         {
             InitializeComponent();
             AY();
-
         }
         public async void AY()
         {
-
-            //tekrar bak.
 
             ogrenciAkademikYapiDTO sonuc = await App.sManager.AkademikYapi(App._ogrenciNo, App._sifre);
 

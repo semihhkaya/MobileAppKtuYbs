@@ -14,6 +14,7 @@
                                VerticalTextAlignment="Center" BackgroundColor="#79b1cd" TextColor="#113547" FontAttributes="Bold">
 
                         </Label>
+                        
                         <ListView ItemsSource="{Binding Path=Dersler}"
                                   RowHeight="40"
                                   BackgroundColor="#72e573">

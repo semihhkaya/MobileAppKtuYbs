@@ -42,8 +42,8 @@ namespace MobileAppKtuYbs.Droid
 
             else
             {
-                var dto = MainActivity.mapper.Map<kullaniciDTO>(sonuc);
-                return dto;
+                var info = MainActivity.mapper.Map<kullaniciDTO>(sonuc);
+                return info;
             }
 
         }

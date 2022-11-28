@@ -20,7 +20,7 @@ namespace MobileAppKtuYbs
             return service.KimlikDogrula(ogrenciNo, sifre);
 
         }
-
+        
         public async Task<MobileAppKtuYbs.ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre)
         {
             return await service.AkademikYapi(ogrenciNo, sifre);

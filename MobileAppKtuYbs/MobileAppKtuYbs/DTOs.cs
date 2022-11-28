@@ -44,7 +44,7 @@ namespace MobileAppKtuYbs
         public string HesKodu { get; set; }
     }
 
-    public class ogrenciAkademikYapiDTO
+    public class ogrenciAkademikYapiDTO //somuc
     {
         public bool Hata { get; set; }
         public string HataMesaji { get; set; }
@@ -87,6 +87,7 @@ namespace MobileAppKtuYbs
     {
         public Int16 GUN_ID { get; set; }
         public List<DersTakvimGunDTO> Saatler { get; set; }
+
         public List<DersTakvimGunDTO> DoluSaatler
         {
             get
