@@ -24,6 +24,10 @@ namespace MobileAppKtuYbs.Droid
                 cfg.CreateMap<wsKTU.DersTakvim, DersTakvimDTO>();
                 cfg.CreateMap<wsKTU.DersTakvimGun, DersTakvimGunDTO>();
 
+                cfg.CreateMap<wsKTU.returnDersNot, DersNotDTO>();
+                cfg.CreateMap<wsKTU.Ders, DersDTO>();
+                cfg.CreateMap<wsKTU.Sinav, SinavDTO>();
+
 
             });
             mapper = configuration.CreateMapper();

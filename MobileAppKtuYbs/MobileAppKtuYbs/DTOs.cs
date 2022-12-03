@@ -14,6 +14,7 @@ namespace MobileAppKtuYbs
     public class kullaniciDTO // Giriş
     {
         //http://193.140.168.236/WSAndroid/Service1.asmx
+
         public bool Hata { get; set; }
         //property
         public string HataMesaji { get; set; }
@@ -118,8 +119,62 @@ namespace MobileAppKtuYbs
         }
     }
 
-    //XML WEB SERVİCE //web service nedir //PCL SHared classLib //WSDL NEDİR? //ws'De dizi ise
-    //projeden list şeklinde ulaşılır. //Reference.cs //Interface //DTO //Image yükleme Uri
-    //ImageSource //Listview-ItemSource, Binding // await async //Get-Set //Linq
+    public class DersNotDTO
+    {
+        public bool Hata { get; set; }
+        public string HataMesaji { get; set; }
+        public string ADSOYAD { get; set; }
+        public int SINIFI { get; set; }
+        public string FAKULTEADI { get; set; }
+        public string BOLUMADI { get; set; }
+        public string PROGRAM { get; set; }
+        public string DANISMAN { get; set; }
+        public string RESIMRUL { get; set; }
+        public List<DersDTO> DersNotlar { get; set; }
 
+    }
+    public class DersDTO
+    {
+        public Int16 ANKETDOLDURDU { get; set; }
+        public Int64? SUBE_SATIRID { get; set; }
+        public string OGRENCI_NO { get; set; }
+        public Int16 NOTGIRISBITTI { get; set; }
+        public string OGRENIM_YILI { get; set; }
+        public Int16 DONEMI { get; set; }
+        public string HARFNOTU { get; set; }
+        public string DERS_KODU { get; set; }
+        public string DERS_ADI { get; set; }
+        public string AKADEMISYEN_ADI { get; set; }
+        public Int64? BUTUNLEMEGIRECEK { get; set; }
+        public Int64? FINALHARFLENDIRME { get; set; }
+        public Int64? FINALAKTARIM { get; set; }
+        public float? FINALSTANDARTSAPMA { get; set; }
+        public float? FINALORTALAMA { get; set; }
+        public Int64? FINALDEGOGRENCISAYISI { get; set; }
+        public Int64? BUTUNLEMEHARFLENDIRME { get; set; }
+        public Int64? BUTUNLEMEAKTARIM { get; set; }
+        public float? BUTUNLEMESTANDARTSAPMA { get; set; }
+        public float? BUTUNLEMEORTALAMA { get; set; }
+        public Int64? BUTUNLEMEDEGOGRENCISAYISI { get; set; }
+        public int DEGERLENDIRMEGORUNSUN { get; set; }
+        public List<SinavDTO> Sinavlar { get; set; }
+
+    }
+    public class SinavDTO
+    {
+        public Int16 DEVAMSIZLIK { get; set; }
+        public Int16 SINAVKATKI { get; set; }
+        public string SINAVADI { get; set; }
+        public Int64 SINAV_TURU { get; set; }
+        public string SAYISAL_NOT { get; set; }
+        public string NOTGIRISIBITTI { get; set; }
+        public Int64 NOTGIRISIBITTI_KOD { get; set; }
+        public string SINAV_SIRA_ACK { get; set; }
+        public string FINALDEGERLENDIRMEACK { get; set; }
+        public string BUTUNLEMEDEGERLENDIRMEACK { get; set; }
+        public string SINAVORTALAMA { get; set; }
+        public Int64? SINAVAGIRDI { get; set; }
+        public string HARF_NOTU { get; set; }
+        public Int64? TNOTU { get; set; }
+    }
 }

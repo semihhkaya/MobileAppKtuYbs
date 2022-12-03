@@ -12,10 +12,11 @@ using System.Threading.Tasks;
 
 namespace MobileAppKtuYbs.Droid
 {
-    public class SoapManager : MobileAppKtuYbs.ISoapService
+    public class SoapManager : ISoapService
     {
         wsKTU.Service1 sClient;
         wsKTU.Authentication auth;
+
         public SoapManager()
         {
             sClient = new wsKTU.Service1();
@@ -25,10 +26,11 @@ namespace MobileAppKtuYbs.Droid
             auth.password = "CanKTU.2019";
         }
 
-        public async Task<MobileAppKtuYbs.kullaniciDTO> KimlikDogrula(string ogrenciNo, string sifre)
+        public async Task<kullaniciDTO> KimlikDogrula(string ogrenciNo, string sifre)
         {
             wsKTU.returnKimlikDogrulama sonuc = sClient.KimlikDogrula(auth, ogrenciNo, sifre);
-            
+            //kullaniciDTO ds = new kullaniciDTO();
+
             if (sonuc.Hata)
             {
                 // hata oluştu
@@ -85,6 +87,28 @@ namespace MobileAppKtuYbs.Droid
             else
             {
                 var dto = MainActivity.mapper.Map<OgrDersProgramiDTO>(sonuc);
+                return dto;
+            }
+
+        }
+
+        public async Task<MobileAppKtuYbs.DersNotDTO> OgrenviVizeNotlari(string ogrencino, string sifre)
+        {
+
+            wsKTU.returnDersNot sonuc = sClient.IOSVizeNotlarv2(auth, ogrencino, sifre, 1);
+            //sonuc.Dersler[0].Saatler[0].
+            if (sonuc.Hata)
+            {
+                // hata oluştu
+                return new DersNotDTO()
+                {
+                    Hata = true,
+                    HataMesaji = sonuc.HataMesaji
+                };
+            }
+            else
+            {
+                var dto = MainActivity.mapper.Map<DersNotDTO>(sonuc);
                 return dto;
             }
 

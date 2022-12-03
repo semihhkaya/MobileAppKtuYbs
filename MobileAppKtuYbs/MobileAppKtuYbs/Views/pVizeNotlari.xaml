@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppKtuYbs.Views.pVizeNotlari">
+    <ContentPage.Content>
+
+
+        <ListView x:Name="vizeList" HasUnevenRows="True" VerticalOptions="Start" BackgroundColor="#79b1cd">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <ViewCell>
+                        <StackLayout>
+
+                            <Label Padding="5,5,0,0" Text="{Binding DERS_ADI}" HeightRequest="40"
+                               VerticalTextAlignment="Center" BackgroundColor="#79b1cd" TextColor="#113547" FontAttributes="Bold">
+
+                            </Label>
+
+                            <ListView ItemsSource="{Binding Path=Sinavlar}"
+                                  RowHeight="40"
+                                  BackgroundColor="#72e573">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <!--<StackLayout Orientation="Horizontal"  
+                                                     HeightRequest="40">-->
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="180"></ColumnDefinition>
+                                                    <ColumnDefinition Width="60"></ColumnDefinition>
+                                                    <ColumnDefinition Width="80"></ColumnDefinition>
+
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label TextColor="#384038" Padding="5,0,0,0" Text="{Binding SINAVADI}" Grid.Column="0" VerticalOptions="Center">
+                                                </Label>
+                                                <Label  TextColor="#384038"  FontAttributes="Bold" Text="{Binding SINAVORTALAMA}" Grid.Column="2" VerticalOptions="Center">
+                                                </Label>
+                                                <Label TextColor="#384038" FontAttributes="Bold" Text="{Binding HARF_NOTU}" Grid.Column="3" VerticalOptions="Center">
+                                                </Label>
+                                                <Label TextColor="#384038" FontAttributes="Bold" Text="{Binding SAYISAL_NOT}" Grid.Column="3" VerticalOptions="Center">
+                                                </Label>
+                                            </Grid>
+
+                                            <!--</StackLayout>-->
+                                        </ViewCell>
+
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+    </ContentPage.Content>
+</ContentPage>

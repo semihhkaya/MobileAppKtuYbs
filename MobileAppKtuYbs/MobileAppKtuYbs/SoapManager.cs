@@ -9,7 +9,7 @@ namespace MobileAppKtuYbs
     {
         ISoapService service;
 
-        //ctor //Consructor
+        //ctor //Consructor //Yapıcı blok //Inheritance
         public SoapManager(ISoapService s)
         {
             service = s;
@@ -17,10 +17,13 @@ namespace MobileAppKtuYbs
 
         public Task<kullaniciDTO> KimlikDogrula(string ogrenciNo, string sifre)
         {
-            return service.KimlikDogrula(ogrenciNo, sifre);
+            return service.KimlikDogrula(ogrenciNo, sifre); //Emir vermek //Açıklama yazmak
 
         }
         
+
+
+
         public async Task<MobileAppKtuYbs.ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre)
         {
             return await service.AkademikYapi(ogrenciNo, sifre);
@@ -29,6 +32,10 @@ namespace MobileAppKtuYbs
         public Task<OgrDersProgramiDTO> OgrenciDersProgrami(Int64 ogrenciId, string sifre)
         {
             return service.OgrenciDersProgrami(ogrenciId, sifre);
+        }
+        public Task<MobileAppKtuYbs.DersNotDTO> OgrenviVizeNotlari(string ogrencino, string sifre)
+        {
+            return service.OgrenviVizeNotlari(ogrencino, sifre);
         }
     }
 }
