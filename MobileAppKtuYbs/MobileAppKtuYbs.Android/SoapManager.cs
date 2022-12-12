@@ -63,6 +63,7 @@ namespace MobileAppKtuYbs.Droid
                     HataMesaji = sonuc.HataMesaji
                 };
             }
+
             else
             {
                 var dto = MainActivity.mapper.Map<ogrenciAkademikYapiDTO>(sonuc);
@@ -70,6 +71,7 @@ namespace MobileAppKtuYbs.Droid
             }
 
         }
+
         public async Task<MobileAppKtuYbs.OgrDersProgramiDTO> OgrenciDersProgrami(Int64 ogrenciId, string sifre)
         {
 
@@ -109,6 +111,29 @@ namespace MobileAppKtuYbs.Droid
             else
             {
                 var dto = MainActivity.mapper.Map<DersNotDTO>(sonuc);
+                return dto;
+            }
+
+        }
+
+        public async Task<MobileAppKtuYbs.StringDTO> SifreDegistir(string ogrencino, string sifre,string yenisifre)
+        {
+
+            wsKTU.returnString sonuc = sClient.IOSSifreDegistir(auth, ogrencino, sifre, yenisifre);
+            //sonuc.
+
+            if (sonuc.Hata)
+            {
+                // hata oluştu
+                return new StringDTO()
+                {
+                    Hata = true,
+                    HataMesaji = sonuc.HataMesaji
+                };
+            }
+            else
+            {
+                var dto = MainActivity.mapper.Map<StringDTO>(sonuc);
                 return dto;
             }
 

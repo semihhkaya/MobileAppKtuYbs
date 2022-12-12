@@ -27,7 +27,7 @@ namespace MobileAppKtuYbs.Droid
                 cfg.CreateMap<wsKTU.returnDersNot, DersNotDTO>();
                 cfg.CreateMap<wsKTU.Ders, DersDTO>();
                 cfg.CreateMap<wsKTU.Sinav, SinavDTO>();
-
+                cfg.CreateMap<wsKTU.returnString, StringDTO>();
 
             });
             mapper = configuration.CreateMapper();

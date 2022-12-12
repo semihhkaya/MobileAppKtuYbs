@@ -177,4 +177,10 @@ namespace MobileAppKtuYbs
         public string HARF_NOTU { get; set; }
         public Int64? TNOTU { get; set; }
     }
+    public class StringDTO
+    {
+        public bool Hata { get; set; }
+        public string HataMesaji { get; set; }
+        public string Value { get; set; }
+    }
 }

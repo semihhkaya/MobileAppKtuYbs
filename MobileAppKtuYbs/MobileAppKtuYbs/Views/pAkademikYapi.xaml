@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppKtuYbs.Views.pAkademikYapi">
+    
 
     <ListView x:Name="listView" HasUnevenRows="True" VerticalOptions="Start" BackgroundColor="#79b1cd">
         <ListView.ItemTemplate>
@@ -9,9 +10,13 @@
 
                 <ViewCell>
                     <StackLayout>
+                        <Label>
+                            
+                        </Label>
 
-                        <Label Padding="5,5,0,0" Text="{Binding SINIFDONEM}" HeightRequest="40" 
-                               VerticalTextAlignment="Center" BackgroundColor="#79b1cd" TextColor="#113547" FontAttributes="Bold">
+                        <Label Padding="5,5,0,0" Text="{Binding SINIFDONEM}" HeightRequest="40"
+                               VerticalTextAlignment="Center" BackgroundColor="#79b1cd" 
+                               TextColor="#113547" FontAttributes="Bold">
 
                         </Label>
                         
@@ -21,8 +26,8 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <!--<StackLayout Orientation="Horizontal"  
-                                                     HeightRequest="40">-->
+                                        <StackLayout Orientation="Horizontal"  
+                                                     HeightRequest="40">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="180"></ColumnDefinition>
@@ -33,13 +38,15 @@
 
                                             <Label TextColor="#384038" Padding="5,0,0,0" Text="{Binding DERS_ADI}" Grid.Column="0" VerticalOptions="Center">
                                         </Label>
-                                            <Label x:Name="deneme" TextColor="#384038"  FontAttributes="Bold" Text="{Binding BASARI_DURUMU}" Grid.Column="2" VerticalOptions="Center">
+                                            <Label x:Name="deneme" TextColor="#384038"  FontAttributes="Bold" Text="{Binding BASARI_DURUMU}" 
+                                                   Grid.Column="2" VerticalOptions="Center">
                                         </Label>
-                                        <Label TextColor="#384038" FontAttributes="Bold" Text="{Binding BASARI_NOTU}" Grid.Column="3" VerticalOptions="Center">
+                                        <Label TextColor="#384038" FontAttributes="Bold" Text="{Binding BASARI_NOTU}" 
+                                               Grid.Column="3" VerticalOptions="Center">
                                         </Label>
                                         </Grid>
                                         
-                                        <!--</StackLayout>-->
+                                        </StackLayout>
                                     </ViewCell>
 
                                 </DataTemplate>

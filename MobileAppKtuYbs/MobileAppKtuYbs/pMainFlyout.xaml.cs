@@ -6,7 +6,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -38,7 +37,8 @@ namespace MobileAppKtuYbs
                     new pMainFlyoutMenuItem { Id = 1, Title = "Akademik Yapı", TargetType=typeof(Views.pAkademikYapi) },
                     new pMainFlyoutMenuItem { Id = 2, Title = "Ders Programı", TargetType=typeof(Views.pDersProgrami) },
                     new pMainFlyoutMenuItem { Id = 3, Title = "Vize Notları",TargetType=typeof(Views.pVizeNotlari) },
-                    new pMainFlyoutMenuItem { Id = 4, Title = "Akademik Durum Analizi" },
+                    new pMainFlyoutMenuItem { Id = 4, Title = "Geri Bildirim",TargetType=typeof(Views.pGeriBildirim) },
+                    new pMainFlyoutMenuItem { Id = 5, Title = "Şifre Değiştir",TargetType=typeof(Views.pSifreDegistirme) },
                 });
             }
 

@@ -19,10 +19,10 @@ namespace MobileAppKtuYbs.Views
         }
         public async void AY()
         {
+            ogrenciAkademikYapiDTO sonuc = await App.sManager.AkademikYapi(App._ogrenciNo, App._sifre); //vERİ BURDA GELİR
 
-            ogrenciAkademikYapiDTO sonuc = await App.sManager.AkademikYapi(App._ogrenciNo, App._sifre);
-
-            listView.ItemsSource = sonuc.sinifDonem;
+            listView.ItemsSource = sonuc.sinifDonem; //OGRENCİAKADEMİKYAPİDTO.SİNİFDONEM ->DERSLER,SINIFDONEM
+            
             
 
 

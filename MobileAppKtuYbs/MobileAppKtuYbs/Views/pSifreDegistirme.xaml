@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppKtuYbs.Views.pSifreDegistirme">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Mevcut Şifreniz"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+            <Entry x:Name="txtSifre" IsPassword="True">
+            </Entry>
+            <Label Text="Yeni Şifreniz"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+            <Entry IsPassword="True" x:Name="txtYeniSifre">
+            </Entry>
+            <Label Text="Yeni Şifreniz"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+            <Entry IsPassword="True" x:Name="txtYeniSifre2">
+            </Entry>
+
+            <Button Clicked="Button_Clicked" Text="Güncelle"></Button>
+
+            <Label Text="Buraya Şifre Belirleme Kuralları Gelecek"></Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

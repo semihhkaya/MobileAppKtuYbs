@@ -20,10 +20,6 @@ namespace MobileAppKtuYbs
             return service.KimlikDogrula(ogrenciNo, sifre); //Emir vermek //Açıklama yazmak
 
         }
-        
-
-
-
         public async Task<MobileAppKtuYbs.ogrenciAkademikYapiDTO> AkademikYapi(string ogrenciNo, string sifre)
         {
             return await service.AkademikYapi(ogrenciNo, sifre);
@@ -36,6 +32,11 @@ namespace MobileAppKtuYbs
         public Task<MobileAppKtuYbs.DersNotDTO> OgrenviVizeNotlari(string ogrencino, string sifre)
         {
             return service.OgrenviVizeNotlari(ogrencino, sifre);
+        }
+
+        public Task<MobileAppKtuYbs.StringDTO> SifreDegistir(string ogrencino, string sifre, string yenisifre)
+        {
+            return service.SifreDegistir(ogrencino, sifre, yenisifre);
         }
     }
 }
