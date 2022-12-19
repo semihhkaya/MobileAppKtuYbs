@@ -14,11 +14,13 @@ namespace MobileAppKtuYbs.Views
         public pVizeNotlari()
         {
             InitializeComponent();
+
             VN();
         }
         public async void VN()
         {
             DersNotDTO sonuc = await App.sManager.OgrenviVizeNotlari(App._ogrenciNo, App._sifre);
+
             vizeList.ItemsSource = sonuc.DersNotlar;
         }
     }

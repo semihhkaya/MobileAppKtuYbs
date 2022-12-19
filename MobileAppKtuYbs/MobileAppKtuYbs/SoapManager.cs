@@ -29,6 +29,7 @@ namespace MobileAppKtuYbs
         {
             return service.OgrenciDersProgrami(ogrenciId, sifre);
         }
+        
         public Task<MobileAppKtuYbs.DersNotDTO> OgrenviVizeNotlari(string ogrencino, string sifre)
         {
             return service.OgrenviVizeNotlari(ogrencino, sifre);

@@ -15,6 +15,7 @@ namespace MobileAppKtuYbs.Droid
     public class SoapManager : ISoapService
     {
         wsKTU.Service1 sClient;
+
         wsKTU.Authentication auth;
 
         public SoapManager()
@@ -54,6 +55,7 @@ namespace MobileAppKtuYbs.Droid
         {
 
             wsKTU.returnOgrenciAkademikYapi sonuc = sClient.OgrenciAkademikYapi(auth, ogrenciNo, sifre);
+            //sonuc.sinifDonem[0].
             if (sonuc.Hata)
             {
                 // hata oluştu
@@ -98,7 +100,9 @@ namespace MobileAppKtuYbs.Droid
         {
 
             wsKTU.returnDersNot sonuc = sClient.IOSVizeNotlarv2(auth, ogrencino, sifre, 1);
-            //sonuc.Dersler[0].Saatler[0].
+
+            //sonuc.DersNotlar[0].Sinavlar[1].
+
             if (sonuc.Hata)
             {
                 // hata oluştu
