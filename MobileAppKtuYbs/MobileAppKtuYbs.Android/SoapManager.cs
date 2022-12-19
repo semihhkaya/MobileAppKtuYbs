@@ -55,7 +55,7 @@ namespace MobileAppKtuYbs.Droid
         {
 
             wsKTU.returnOgrenciAkademikYapi sonuc = sClient.OgrenciAkademikYapi(auth, ogrenciNo, sifre);
-            //sonuc.sinifDonem[0].
+            //sonuc.
             if (sonuc.Hata)
             {
                 // hata oluştu

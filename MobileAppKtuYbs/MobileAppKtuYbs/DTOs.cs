@@ -45,7 +45,7 @@ namespace MobileAppKtuYbs
         public string HesKodu { get; set; }
     }
 
-    public class ogrenciAkademikYapiDTO //somuc
+    public class ogrenciAkademikYapiDTO 
     {
         public bool Hata { get; set; }
         public string HataMesaji { get; set; }
@@ -58,13 +58,13 @@ namespace MobileAppKtuYbs
         public List<sinifDonemDTO> sinifDonem { get; set; }
         public Int32 SINIFI { get; set; }
 
-    }
+    } //ogr akademik
     public class sinifDonemDTO
     {
         public List<DersDurumDTO> Dersler { get; set; }
         public string SINIFDONEM { get; set; }
-    }
-    public class DersDurumDTO
+    } //ogr akademik
+    public class DersDurumDTO //ogr akademik
     {
         public bool Hata { get; set; }
         public string HataMesaji { get; set; }
