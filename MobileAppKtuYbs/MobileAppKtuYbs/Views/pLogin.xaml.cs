@@ -14,6 +14,8 @@ namespace MobileAppKtuYbs.Views
         public pLogin()
         {
             InitializeComponent();
+            txtOgrenciNo.Text = "396523";
+            txtSifre.Text = "123456fb";
             
         }
         //await çağırmak için async olması gerekiyor.

@@ -39,6 +39,8 @@ namespace MobileAppKtuYbs
                     new pMainFlyoutMenuItem { Id = 3, Title = "Vize Notları",TargetType=typeof(Views.pVizeNotlari) },
                     new pMainFlyoutMenuItem { Id = 4, Title = "Geri Bildirim",TargetType=typeof(Views.pGeriBildirim) },
                     new pMainFlyoutMenuItem { Id = 5, Title = "Şifre Değiştir",TargetType=typeof(Views.pSifreDegistirme) },
+                    new pMainFlyoutMenuItem { Id = 6, Title = "Not Hesapla",TargetType=typeof(Views.pNotHesap) },
+                    new pMainFlyoutMenuItem { Id = 6, Title = "Denklem",TargetType=typeof(Views.pHesap) },
                 });
             }
 

@@ -45,7 +45,7 @@ namespace MobileAppKtuYbs
         public string HesKodu { get; set; }
     }
 
-    public class ogrenciAkademikYapiDTO 
+    public class ogrenciAkademikYapiDTO
     {
         public bool Hata { get; set; }
         public string HataMesaji { get; set; }
@@ -75,6 +75,16 @@ namespace MobileAppKtuYbs
         public string DURUM_KODU { get; set; }
         public Int16? SINIF { get; set; }
         public string YAZILIM_SEKLİ { get; set; }
+        public System.Drawing.Color RENKLER
+        {
+            get
+            {
+                if (BASARI_DURUMU == "Geçti")
+                    return System.Drawing.Color.Green;
+                else
+                    return System.Drawing.Color.Red;
+            }
+        }
     }
 
     public class OgrDersProgramiDTO //Hocadaki derstakvimdto
@@ -119,9 +129,9 @@ namespace MobileAppKtuYbs
         }
     }
 
-    public class DersNotDTO
+    public class DersNotDTO //Vize
     {
-        public bool Hata { get; set; }
+        public bool Hata { get; set; } //Property
         public string HataMesaji { get; set; }
         public string ADSOYAD { get; set; }
         public int SINIFI { get; set; }

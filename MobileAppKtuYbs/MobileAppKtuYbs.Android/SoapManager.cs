@@ -55,7 +55,7 @@ namespace MobileAppKtuYbs.Droid
         {
 
             wsKTU.returnOgrenciAkademikYapi sonuc = sClient.OgrenciAkademikYapi(auth, ogrenciNo, sifre);
-            //sonuc.
+            //sonuc.sinifDonem[0].
             if (sonuc.Hata)
             {
                 // hata oluştu
@@ -100,7 +100,6 @@ namespace MobileAppKtuYbs.Droid
         {
 
             wsKTU.returnDersNot sonuc = sClient.IOSVizeNotlarv2(auth, ogrencino, sifre, 1);
-
             //sonuc.DersNotlar[0].Sinavlar[1].
 
             if (sonuc.Hata)
@@ -120,7 +119,7 @@ namespace MobileAppKtuYbs.Droid
 
         }
 
-        public async Task<MobileAppKtuYbs.StringDTO> SifreDegistir(string ogrencino, string sifre,string yenisifre)
+        public async Task<MobileAppKtuYbs.StringDTO> SifreDegistir(string ogrencino, string sifre, string yenisifre)
         {
 
             wsKTU.returnString sonuc = sClient.IOSSifreDegistir(auth, ogrencino, sifre, yenisifre);

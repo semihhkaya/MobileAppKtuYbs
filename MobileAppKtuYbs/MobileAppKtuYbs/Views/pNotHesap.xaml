@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppKtuYbs.Views.pNotHesap">
+    <ContentPage.Content>
+        <StackLayout Padding="25,25,25,25">
+            
+            <Label VerticalOptions="Start" Text="Ara Sınav 1:"></Label>
+            <Entry x:Name="txtarasinavnot"></Entry>
+
+            <Label VerticalOptions="Start" Text="Ara Sınav 1 Oran:"></Label>
+            <Entry x:Name="txtarasinavoran"></Entry>
+
+            <Label VerticalOptions="Start" Text="Final Sınav"></Label>
+            <Entry x:Name="txtfinalnot"></Entry>
+            
+
+            <Label VerticalOptions="Start" Text="Final Oran"></Label>
+            <Entry x:Name="txtfinaloran"></Entry>
+
+            <Button Text="Hesapla" Clicked="Button_Clicked"></Button>
+
+            <Label x:Name="genelort" Text=""></Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

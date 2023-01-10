@@ -14,7 +14,6 @@ namespace MobileAppKtuYbs.Views
         public pVizeNotlari()
         {
             InitializeComponent();
-
             VN();
         }
         public async void VN()
